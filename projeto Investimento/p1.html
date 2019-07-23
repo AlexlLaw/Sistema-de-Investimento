@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+              <title>P1</title>
+              <meta charset="utf-8">
+              <link rel="stylesheet" type="text/css" href="p1.css">
+    </head>
+    <body>
+        <table>
+            <tr> 
+                <td class="f1">
+                           <div class="modal">
+                               <h1>Formulario</h1>
+                            <form onsubmit="event.preventDefault();ativar();" autocomplete="off">
+                                <input type="button" value="X" class="modal-close"></span>
+                              <div>
+                                  <label>Nome</label><label class="validat-erro hide" id="validate">Preenchimento Obrigatorio</label>
+                                  <input type="text" class="nome" id="nome"></input>
+                              </div>
+                            
+                              <div>
+                                  <label>Sobrenome</label>
+                                  <input type="text" class="sobrenome" id="sobrenome"></input>
+                              </div>
+                              
+                              <div>
+                                  <label>Numero</label>
+                                  <input type="text" class="numero" id="numero">
+                              </div>
+                              
+                              <div>
+                                    <label>CPF</label>
+                                    <input type="text" class="cpf" id="cpf">
+                                </div>
+                                
+                                <div>
+                                        <label>Agencia</label>
+                                        <input type="text" class="agencia" id="agencia">
+                                </div>
+                                
+                                <div>
+                                        <label>Conta</label>
+                                        <input type="text" class="conta" id="conta">
+                                </div>
+                                
+                                <div class="form-action-buttons">   
+                                        <input type="submit" value="cadastrar" class="btns">
+                                        
+                                </div>
+                         
+                              
+                            </form>   
+                           </div>
+                </td>
+                <div class="bt">
+                        <button class="modal-btn">Investir</button>
+                    </div>
+              
+                    <table class="Lista" id="lista">
+                     <thead >
+                         <tr>
+                               <th>Nome</th>
+                               <th>Sobrenome</th>
+                               <th>numero</th>
+                               <th>Cpf</th>
+                               <th>agencia</th>
+                               <th>Conta</th>
+                               <th>ações</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+ 
+
+
+            </tr>
+        </table>
+
+        <script src="p1.js"></script>
+    </body>
+</html>
