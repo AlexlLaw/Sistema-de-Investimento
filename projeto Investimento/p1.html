@@ -7,12 +7,54 @@
     </head>
     <body>
         <table>
+             <td class="f2">
+                  <form class="">
+                      <div class="filtro">
+                        <h1>Filtro Rapido</h1>
+                    </div>
+                    <br>
+                           <div>
+                               <label>Data entre</label>
+                               <br>
+                               <input type="date" class="data" id="data"> e <input type="date" class="data" id="data">
+                           </div>
+                           <br>
+                           <div>
+                                <label>Nome</label>
+                                <input type="text" class="name" id="name">
+                            </div>
+                            <br>
+                           <div>
+                                <label>CPF</label>
+                                <input type="text" class="cPf" id="Cpf">
+                            </div>
+                            <br>
+                           <div>
+                                <label>Grupo</label>
+                                <input type="text" class="Grupo" id="grupo">
+                            </div>
+                            <br>
+                           <div>
+                                <label>Caixa</label>
+                                <input type="text" class="caixa" id="caixa">
+                            </div>
+                            <div>
+                                <input type="submit" value="filtrar">
+                            </div>
+                    </form>        
+             </td>
+        </table>
+
+        <!--formulario com modal-->
+        <table>
             <tr> 
                 <td class="f1">
                            <div class="modal">
+                                <br>
                                <h1>Formulario</h1>
+                               <br>
                             <form onsubmit="event.preventDefault();ativar();" autocomplete="off">
-                                <input type="button" value="X" class="modal-close"></span>
+                                <input type="button" value="X" class="modal-close" id="close"></input>
                               <div>
                                   <label>Nome</label><label class="validat-erro hide" id="validate">Preenchimento Obrigatorio</label>
                                   <input type="text" class="nome" id="nome"></input>
@@ -22,15 +64,15 @@
                                   <label>Sobrenome</label>
                                   <input type="text" class="sobrenome" id="sobrenome"></input>
                               </div>
-                              
                               <div>
                                   <label>Numero</label>
-                                  <input type="text" class="numero" id="numero">
+                                  <input type="text" class="numero" id="numero"/>
                               </div>
-                              
+                                
                               <div>
                                     <label>CPF</label>
-                                    <input type="text" class="cpf" id="cpf">
+                                    <input oninput="mascara(this, 'cpf')" id="campo4" type="text" class="form-control" placeholder="Ex.: xxx.xxx.xxx-xx" autocomplete="off" name="customer['cpf']">
+                                    <!--<input type="text" name="cpf" class="cpf" id="cpf" pattern="\d{3}.\d{3}.\d{3}-\d{2}">-->
                                 </div>
                                 
                                 <div>
@@ -44,7 +86,7 @@
                                 </div>
                                 
                                 <div class="form-action-buttons">   
-                                        <input type="submit" value="cadastrar" class="btns">
+                                        <input type="submit" value="cadastrar" class="">
                                         
                                 </div>
                          

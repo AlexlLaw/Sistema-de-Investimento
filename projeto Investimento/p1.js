@@ -37,8 +37,8 @@ function inserir(data){
     cell6 = newRow.insertCell(5);
     cell6.innerHTML = data.conta;
     cell6 = newRow.insertCell(6);
-    cell6.innerHTML =`<input type="button" value="Editar" class="" onclick="editar(this)"></input> 
-                       <input type="button"onclick="deletar(this)" value="deletar"></input>`;
+    cell6.innerHTML =`<input type="button" value="Editar" class="edit" onclick="editar(this)"></input> 
+                       <input type="button"onclick="deletar(this)" class="deleta" value="deletar"></input>`;
 
 }
 function resetar(){
@@ -99,4 +99,21 @@ modalbtn.addEventListener('click', function(){
 
 modalclose.addEventListener('click', function(){
     modalbg.classList.remove('bg-active');
+    resetar();
 });
+
+
+
+function mascara(i,t){
+let v = i.value;
+if(isNaN(v[v.length-1])){
+
+    i.value = v.substring(0, v.lenght-1);
+    return;
+}
+if(t == "cpf"){
+    i.setAttribute("maxlength", "14");
+    if (v.length == 3 || v.length == 7) i.value += ".";
+    if (v.length == 11) i.value += "-";
+ }
+}
